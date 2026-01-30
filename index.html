@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método CL Academy - Únete a la Comunidad</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Fondo tecnológico con overlay oscuro */
+        .bg-tech {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9)),
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 28px;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px -10px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-whatsapp:hover {
+            transform: scale(1.03);
+            background-color: #22c35e;
+            box-shadow: 0 15px 25px -5px rgba(37, 211, 102, 0.6);
+        }
+
+        .logo-container {
+            filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2));
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .main-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .social-icon {
+            transition: all 0.3s ease;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .social-icon:hover {
+            color: #25D366;
+            transform: translateY(-3px);
+            filter: drop-shadow(0 0 8px rgba(37, 211, 102, 0.5));
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-6">
+
+    <div class="bg-tech"></div>
+
+    <main class="w-full max-w-md text-center fade-in">
+        
+        <!-- Espacio para Logo Personalizado -->
+        <div class="mb-8">
+            <div class="inline-block mb-4 logo-container">
+                <img src="logo.png" alt="Método CL Academy" onerror="this.src='https://via.placeholder.com/150x150/000000/FFFFFF?text=Logo+PNG'" class="h-20 w-auto object-contain">
+            </div>
+            <h1 class="text-3xl font-black tracking-tight mb-4 uppercase">MÉTODO CL <span class="text-[#25D366]">ACADEMY</span></h1>
+            <div class="space-y-3 px-2">
+                <p class="text-gray-200 text-base leading-snug">
+                    Aprende a crear landing pages, menús digitales y negocios online usando herramientas <span class="text-[#25D366] font-bold">GRATUITAS</span> e Inteligencia Artificial.
+                </p>
+                <p class="text-gray-400 text-sm italic">
+                    Únete a la comunidad privada y aprende paso a paso. 👇
+                </p>
+            </div>
+        </div>
+
+        <!-- Card Principal -->
+        <div class="glass-card overflow-hidden shadow-2xl mb-8">
+            <div class="relative h-64 bg-white/5 flex items-center justify-center p-4">
+                 <img src="imagen-principal.jpg" alt="Contenido Principal" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="main-img border border-white/10 shadow-lg">
+                 
+                 <div class="hidden w-full h-full border-2 border-dashed border-white/10 rounded-2xl items-center justify-center text-gray-600 italic">
+                    Carga aquí 'imagen-principal.jpg'
+                 </div>
+            </div>
+
+            <!-- Botón WhatsApp -->
+            <div class="p-6 pt-2">
+                <a href="https://chat.whatsapp.com/FIQeh46Mfk81nGchkmFUmT" 
+                   target="_blank"
+                   class="btn-whatsapp flex flex-col items-center justify-center py-5 rounded-2xl text-white tracking-tight">
+                    <span class="text-xl font-bold uppercase">Unirte a la comunidad</span>
+                    <span class="text-xs opacity-80 font-medium">Acceso inmediato vía WhatsApp</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Redes Sociales Actualizadas -->
+        <footer class="mt-8">
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="https://www.tiktok.com/@crisslombeida?_r=1&_t=ZS-93VZQbxO0mb" target="_blank" class="social-icon">
+                    <i class="fab fa-tiktok text-2xl"></i>
+                </a>
+                <a href="https://www.instagram.com/criss_lombeida2?igsh=cmpicGNjcG53NHpu" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram text-2xl"></i>
+                </a>
+                <a href="https://www.youtube.com/@CrissLombeida" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube text-2xl"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61551569615655&mibextid=wwXIfr" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook text-2xl"></i>
+                </a>
+            </div>
+            <p class="text-[9px] uppercase tracking-[0.3em] text-gray-600 font-bold">
+                &copy; 2024 Método CL Academy
+            </p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
+
