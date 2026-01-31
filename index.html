@@ -41,6 +41,11 @@
             background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             animation: pulse 2s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
         }
 
         @keyframes pulse {
@@ -77,7 +82,7 @@
 
     <main class="w-full max-w-md text-center fade-in">
         
-        <!-- LOGO PRINCIPAL (logo.png en la raíz) -->
+        <!-- LOGO (logo.png en la raíz) -->
         <div class="mb-6">
             <div class="inline-block mb-2">
                 <img src="logo.png" alt="Logo Método CL" onerror="this.src='https://via.placeholder.com/180x180/000/fff?text=TU+LOGO+AQUÍ'" class="h-28 w-auto object-contain">
@@ -89,8 +94,8 @@
                 <p class="text-lg font-bold text-gray-100 leading-tight">
                     Aprende a crear landing pages, menús digitales y negocios online usando herramientas <span class="text-[#25D366]">GRATUITAS</span> e IA.
                 </p>
-                <p class="text-gray-400 text-sm">
-                    Únete a la comunidad privada y aprende paso a paso desde cero.
+                <p class="text-gray-400 text-sm italic">
+                    Únete a la comunidad privada y aprende paso a paso. 👇
                 </p>
             </div>
         </div>
@@ -98,19 +103,20 @@
         <!-- CARD DE IMAGEN (imagen-principal.jpg en la raíz) -->
         <div class="glass-card overflow-hidden shadow-2xl mb-8 border-white/5">
             <div class="relative h-72 p-3">
-                 <img src="imagen-principal.jpg" alt="Aprende con Criss Lombeida" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="main-img border border-white/10">
+                 <img src="imagen-principal.jpg" alt="Aprende con Método CL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="main-img border border-white/10">
                  
                  <div class="hidden w-full h-full border-2 border-dashed border-white/10 rounded-3xl items-center justify-center text-gray-600 italic">
-                    Coloca aquí 'imagen-principal.jpg'
+                    Carga aquí 'imagen-principal.jpg'
                  </div>
             </div>
 
-            <!-- BOTÓN DE ACCIÓN DIRECTA -->
+            <!-- BOTÓN DE ACCIÓN CORREGIDO -->
             <div class="p-6 pt-2">
-                <!-- Enlace actualizado al número: +593 99 942 4550 -->
-                <a href="https://wa.me/593999424550" 
+                <!-- Enlace API Universal: +593 99 942 4550 -->
+                <a href="https://api.whatsapp.com/send?phone=593999424550" 
                    target="_blank"
-                   class="btn-cta flex flex-col items-center justify-center py-6 rounded-2xl text-white shadow-xl">
+                   rel="noopener noreferrer"
+                   class="btn-cta py-6 rounded-2xl text-white shadow-xl">
                     <span class="text-2xl font-black uppercase tracking-tighter">¡SÍ, QUIERO UNIRME AHORA!</span>
                     <span class="text-xs font-bold opacity-90 mt-1 uppercase">Empieza tu negocio hoy mismo</span>
                 </a>
