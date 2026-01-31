@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        
+
         body {
             background-color: #000;
             color: #fff;
@@ -23,7 +23,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
                 url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070') no-repeat center center;
             background-size: cover;
@@ -76,77 +76,98 @@
         }
     </style>
 </head>
+
 <body class="flex items-center justify-center min-h-screen p-4">
 
-    <div class="bg-tech"></div>
+<div class="bg-tech"></div>
 
-    <main class="w-full max-w-md text-center fade-in">
-        
-        <!-- LOGO -->
-        <div class="mb-6">
-            <div class="inline-block mb-2">
-                <img src="logo.png" alt="Logo Método CL" onerror="this.src='https://via.placeholder.com/180x180/000/fff?text=TU+LOGO+AQUÍ'" class="h-28 w-auto object-contain">
-            </div>
-            <h1 class="text-4xl font-black tracking-tighter mb-4 uppercase">
-                MÉTODO CL <span class="text-[#25D366]">ACADEMY</span>
-            </h1>
-            <div class="px-4 space-y-4">
-                <p class="text-lg font-bold text-gray-100 leading-tight">
-                    Aprende a crear páginas web desde cero
-usando inteligencia artificial y una plataforma en la nube
-que permite publicar tu web en menos de una hora,
-sin pagar servidores ni herramientas <span class="text-[#25D366]">GRATUITAS</span> paso a paso.
-                </p>
-                <p class="text-gray-400 text-sm italic">
-                    Únete a la comunidad privada y aprende paso a paso. 👇
-                </p>
-            </div>
-        </div>
+<main class="w-full max-w-md text-center fade-in">
 
-        <!-- CARD -->
-        <div class="glass-card overflow-hidden shadow-2xl mb-8 border-white/5">
-            <div class="relative h-72 p-3">
-                 <img src="imagen-principal.jpg" alt="Aprende con Método CL" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" class="main-img border border-white/10">
-                 
-                 <div class="hidden w-full h-full border-2 border-dashed border-white/10 rounded-3xl items-center justify-center text-gray-600 italic">
-                    Carga aquí 'imagen-principal.jpg'
-                 </div>
-            </div>
+    <!-- LOGO -->
+    <div class="mb-6">
+        <img src="logo.png"
+             onerror="this.src='https://via.placeholder.com/180x180/000/fff?text=TU+LOGO'"
+             class="h-28 mx-auto mb-4">
 
-            <!-- BOTÓN DE ACCIÓN (ÚNICO CAMBIO AQUÍ) -->
-            <div class="p-6 pt-2">
-                <a href="https://wa.me/593999424550?text=QUIERO%20UNIRME%20A%20LA%20COMUNIDAD%20METODO%20CL"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="btn-cta py-6 rounded-2xl text-white shadow-xl">
-                    <span class="text-2xl font-black uppercase tracking-tighter">¡SÍ, QUIERO UNIRME AHORA!</span>
-                    <span class="text-xs font-bold opacity-90 mt-1 uppercase">Empieza tu negocio hoy mismo</span>
-                </a>
+        <h1 class="text-4xl font-black tracking-tighter uppercase">
+            MÉTODO CL <span class="text-[#25D366]">ACADEMY</span>
+        </h1>
+
+        <p class="mt-4 text-lg font-bold text-gray-100 leading-tight">
+            Aprende a crear páginas web desde cero usando inteligencia artificial
+            y una plataforma en la nube que permite
+            <span class="text-[#25D366]">publicarlas en minutos</span>,
+            sin pagar servidores ni herramientas.
+        </p>
+
+        <p class="mt-4 text-gray-400 text-sm italic">
+            La primera página se crea en vivo y queda en línea el mismo día. 👇
+        </p>
+    </div>
+
+    <!-- CARD IMAGEN -->
+    <div class="glass-card overflow-hidden shadow-2xl mb-8">
+
+        <div class="relative h-72 p-3">
+            <img src="imagen-principal.jpg"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                 class="main-img border border-white/10">
+
+            <div class="hidden w-full h-full border-2 border-dashed border-white/10 rounded-3xl items-center justify-center text-gray-600 italic">
+                Carga aquí imagen-principal.jpg
             </div>
         </div>
 
-        <!-- REDES -->
-        <footer class="mt-4">
-            <div class="flex justify-center gap-6 mb-8">
-                <a href="https://www.tiktok.com/@crisslombeida?_r=1&_t=ZS-93VZQbxO0mb" target="_blank" class="text-white/40 hover:text-[#25D366] transition-all transform hover:-translate-y-1">
-                    <i class="fab fa-tiktok text-2xl"></i>
-                </a>
-                <a href="https://www.instagram.com/criss_lombeida2?igsh=cmpicGNjcG53NHpu" target="_blank" class="text-white/40 hover:text-[#25D366] transition-all transform hover:-translate-y-1">
-                    <i class="fab fa-instagram text-2xl"></i>
-                </a>
-                <a href="https://www.youtube.com/@CrissLombeida" target="_blank" class="text-white/40 hover:text-[#25D366] transition-all transform hover:-translate-y-1">
-                    <i class="fab fa-youtube text-2xl"></i>
-                </a>
-                <a href="https://www.facebook.com/profile.php?id=61551569615655&mibextid=wwXIfr" target="_blank" class="text-white/40 hover:text-[#25D366] transition-all transform hover:-translate-y-1">
-                    <i class="fab fa-facebook text-2xl"></i>
-                </a>
-            </div>
-            <p class="text-[10px] uppercase tracking-[0.4em] text-white/20 font-bold">
-                &copy; 2024 MÉTODO CL ACADEMY
-            </p>
-        </footer>
+        <!-- TEXTO CLAVE -->
+        <div class="px-6 pb-6 text-left text-sm text-gray-300 leading-relaxed">
+            <strong class="text-white">Aquí no aprendes a hacer páginas web en dos semanas.</strong><br>
+            <strong class="text-[#25D366]">Aprendes a hacer la primera en la primera clase.</strong><br><br>
 
-    </main>
+            No te preocupas por hosting ni servidores.
+            Creamos una página en vivo con un alumno del grupo
+            y queda publicada en línea en menos de una hora.<br><br>
+
+            <strong>Eso es Método CL.</strong>
+        </div>
+
+        <!-- BOTÓN PRINCIPAL (LINKTREE) -->
+        <div class="p-6 pt-0">
+            <a href="https://tr.ee/A4msAT3IWU"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="btn-cta py-6 rounded-2xl text-white shadow-xl">
+
+                <span class="text-2xl font-black uppercase tracking-tighter">
+                    ¡QUIERO UNIRME AHORA!
+                </span>
+                <span class="text-xs font-bold opacity-90 mt-1 uppercase">
+                    Acceso inmediato
+                </span>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- REDES -->
+    <footer class="mt-4">
+        <div class="flex justify-center gap-6 mb-6">
+            <a href="https://www.tiktok.com/@crisslombeida" target="_blank">
+                <i class="fab fa-tiktok text-2xl text-white/40 hover:text-[#25D366]"></i>
+            </a>
+            <a href="https://www.instagram.com/criss_lombeida2" target="_blank">
+                <i class="fab fa-instagram text-2xl text-white/40 hover:text-[#25D366]"></i>
+            </a>
+            <a href="https://www.youtube.com/@CrissLombeida" target="_blank">
+                <i class="fab fa-youtube text-2xl text-white/40 hover:text-[#25D366]"></i>
+            </a>
+        </div>
+
+        <p class="text-[10px] uppercase tracking-[0.4em] text-white/20 font-bold">
+            © 2024 MÉTODO CL ACADEMY
+        </p>
+    </footer>
+
+</main>
 
 </body>
 </html>
