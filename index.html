@@ -24,15 +24,16 @@
             inset: 0;
             background:
                 linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070') no-repeat center;
+                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070')
+                no-repeat center;
             background-size: cover;
             z-index: -1;
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.03);
+            background: rgba(255,255,255,0.03);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 32px;
             box-shadow: 0 30px 80px rgba(0,0,0,0.6);
         }
@@ -64,24 +65,24 @@
 
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            to   { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 
-<body class="flex items-center justify-center min-h-screen p-4">
+<body class="flex items-start justify-center min-h-screen p-4">
 
 <div class="bg-tech"></div>
 
 <main class="w-full max-w-md text-center fade-in">
 
     <!-- LOGO -->
-    <div class="mb-6">
+    <div class="mb-5">
         <img src="logo.png"
              onerror="this.src='https://via.placeholder.com/180x180/000/fff?text=TU+LOGO'"
-             class="h-28 mx-auto mb-4">
+             class="h-24 mx-auto mb-3">
 
-        <h1 class="text-4xl font-black tracking-tighter uppercase">
+        <h1 class="text-3xl font-black tracking-tighter uppercase">
             MÉTODO CL <span class="text-[#25D366]">ACADEMY</span>
         </h1>
     </div>
@@ -89,8 +90,8 @@
     <!-- CARD -->
     <div class="glass-card mb-8 overflow-hidden">
 
-        <!-- IMAGEN -->
-        <div class="h-72 p-3">
+        <!-- IMAGEN (CONTROLADA EN MOBILE) -->
+        <div class="h-48 md:h-72 p-3">
             <img src="imagen-principal.jpg"
                  onerror="this.style.display='none'"
                  class="w-full h-full object-cover rounded-2xl border border-white/10">
@@ -109,7 +110,7 @@
             </span>
         </div>
 
-        <!-- AVISO IMPORTANTE -->
+        <!-- AVISO -->
         <div class="mx-6 mb-4 p-4 rounded-xl bg-yellow-500/10 border border-yellow-400/40 text-yellow-300 text-sm font-semibold leading-snug text-left">
             ⚠️ <strong>IMPORTANTE:</strong><br>
             Si WhatsApp no se abre,<br>
@@ -123,9 +124,9 @@
                target="_blank"
                rel="noopener noreferrer"
                aria-label="Escribir a WhatsApp"
-               class="btn-cta py-6 rounded-2xl text-white shadow-xl">
+               class="btn-cta py-5 rounded-2xl text-white shadow-xl">
 
-                <span class="text-2xl font-black uppercase tracking-tighter">
+                <span class="text-xl font-black uppercase tracking-tighter">
                     ¡QUIERO UNIRME AHORA!
                 </span>
                 <span class="text-xs font-bold opacity-90 mt-1 uppercase">
@@ -135,12 +136,18 @@
         </div>
     </div>
 
-    <!-- REDES -->
+    <!-- FOOTER -->
     <footer>
-        <div class="flex justify-center gap-6 mb-6">
-            <a href="https://www.tiktok.com/@crisslombeida" target="_blank"><i class="fab fa-tiktok text-2xl text-white/40 hover:text-[#25D366]"></i></a>
-            <a href="https://www.instagram.com/criss_lombeida2" target="_blank"><i class="fab fa-instagram text-2xl text-white/40 hover:text-[#25D366]"></i></a>
-            <a href="https://www.youtube.com/@CrissLombeida" target="_blank"><i class="fab fa-youtube text-2xl text-white/40 hover:text-[#25D366]"></i></a>
+        <div class="flex justify-center gap-6 mb-5">
+            <a href="https://www.tiktok.com/@crisslombeida" target="_blank">
+                <i class="fab fa-tiktok text-2xl text-white/40 hover:text-[#25D366]"></i>
+            </a>
+            <a href="https://www.instagram.com/criss_lombeida2" target="_blank">
+                <i class="fab fa-instagram text-2xl text-white/40 hover:text-[#25D366]"></i>
+            </a>
+            <a href="https://www.youtube.com/@CrissLombeida" target="_blank">
+                <i class="fab fa-youtube text-2xl text-white/40 hover:text-[#25D366]"></i>
+            </a>
         </div>
 
         <p class="text-[10px] uppercase tracking-[0.4em] text-white/20 font-bold">
@@ -150,17 +157,18 @@
 
 </main>
 
-<!-- AVISO AUTOMÁTICO PARA NAVEGADORES INTERNOS -->
+<!-- OVERLAY PARA NAVEGADORES INTERNOS -->
 <script>
 (function () {
   const ua = navigator.userAgent || '';
   const internal = /Instagram|FBAN|FBAV|TikTok/i.test(ua);
 
   if (internal) {
-    const div = document.createElement('div');
-    div.innerHTML = `
+    const overlay = document.createElement('div');
+    overlay.innerHTML = `
       <div style="
-        position:fixed; inset:0;
+        position:fixed;
+        inset:0;
         background:rgba(0,0,0,.96);
         z-index:9999;
         display:flex;
@@ -179,7 +187,7 @@
           </p>
         </div>
       </div>`;
-    document.body.appendChild(div);
+    document.body.appendChild(overlay);
   }
 })();
 </script>
