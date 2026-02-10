@@ -1,128 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MÉTODO CL ACADEMY - Únete</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MÉTODO CL ACADEMY</title>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      overflow-x: hidden;
+    }
 
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #000;
-            color: #fff;
-            margin: 0;
-        }
+    .bg-tech {
+      position: fixed;
+      inset: 0;
+      background:
+        linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.95)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070')
+        no-repeat center center;
+      background-size: cover;
+      z-index: -1;
+    }
 
-        html, body {
-            height: auto;
-            overflow-y: auto;
-            -webkit-overflow-scrolling: touch;
-        }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(18px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 24px;
+    }
 
-        .bg-tech {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            min-height: 100%;
-            background:
-                linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
-                url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070')
-                no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-        }
+    .btn-cta {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      animation: pulse 2s infinite;
+      transition: transform 0.25s ease;
+    }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.04);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 28px;
-        }
+    .btn-cta:hover {
+      transform: scale(1.04);
+    }
 
-        .btn-cta {
-            background: linear-gradient(135deg, #25D366, #128C7E);
-            animation: pulse 2s infinite;
-            transition: transform 0.25s ease;
-            text-decoration: none;
-        }
-
-        .btn-cta:hover {
-            transform: scale(1.04);
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
-            70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
-            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-        }
-    </style>
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
+      70% { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+  </style>
 </head>
 
-<body class="flex justify-center items-start min-h-[100dvh] px-4 py-10">
+<body class="flex justify-center px-4 py-10 min-h-screen">
 
-<div class="bg-tech"></div>
+  <div class="bg-tech"></div>
 
-<main class="w-full max-w-md text-center">
+  <main class="w-full max-w-md text-center">
 
-    <!-- LOGO -->
+    <!-- LOGO / TITULO -->
     <div class="mb-6">
-        <img src="logo.png" alt="Método CL" class="mx-auto h-24 mb-4"
-             onerror="this.src='https://via.placeholder.com/200x200/000/fff?text=LOGO'">
-        <h1 class="text-4xl font-black tracking-tight uppercase">
-            MÉTODO CL <span class="text-[#25D366]">ACADEMY</span>
-        </h1>
+      <h1 class="text-4xl font-black uppercase tracking-tight">
+        MÉTODO CL <span class="text-[#25D366]">ACADEMY</span>
+      </h1>
     </div>
 
-    <!-- TEXTO DE ENFOQUE MARCA PERSONAL -->
-    <div class="mb-6 px-4">
-        <p class="text-lg font-bold leading-tight">
-            Aprende a pensar negocios digitales  
-            antes de intentar vender uno.
-        </p>
-        <p class="text-gray-400 text-sm mt-3">
-            Comparto ideas, puntos de vista y aprendizajes  
-            sobre emprendimiento, tecnología  
-            e inteligencia artificial aplicada al negocio.
-        </p>
+    <!-- TEXTO DE MARCA -->
+    <div class="mb-6 px-2">
+      <p class="text-lg font-bold leading-snug">
+        Aprende a pensar negocios digitales  
+        antes de intentar vender uno.
+      </p>
+      <p class="text-gray-400 text-sm mt-3">
+        Emprendimiento, tecnología  
+        e inteligencia artificial aplicada al negocio.
+      </p>
     </div>
 
-    <!-- CARD -->
+    <!-- CARD PRINCIPAL -->
     <div class="glass-card overflow-hidden shadow-xl mb-6">
-        <img src="imagen-principal.jpg" class="w-full h-64 object-cover"
-             onerror="this.style.display='none'">
 
-        <div class="p-6">
-            <a href="https://api.whatsapp.com/send?phone=593999424550&text=Hola%20quiero%20unirme%20a%20la%20comunidad%20Método%20CL"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn-cta block py-5 rounded-2xl text-white font-black uppercase">
-                Quiero unirme ahora
-            </a>
+      <!-- IMAGEN -->
+      <img
+        src="imagen-principal.jpg"
+        alt="Método CL"
+        class="w-full h-56 object-cover"
+        onerror="this.style.display='none'"
+      />
 
-            <p class="text-[11px] text-gray-400 mt-4 leading-snug">
-                ⚠️ IMPORTANTE:  
-                Si WhatsApp no se abre, toca los tres puntos (⋮) arriba  
-                y elige <b>“Abrir en navegador”</b>.
-            </p>
-        </div>
+      <!-- CTA -->
+      <div class="p-6">
+        <a
+          href="https://chat.whatsapp.com/KHL5AMdrUwe9pd0H0LxIzk"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-cta block py-5 rounded-2xl text-white font-black uppercase"
+        >
+          Quiero unirme ahora
+        </a>
+
+        <p class="text-[11px] text-gray-400 mt-4 leading-snug">
+          ⚠️ Si WhatsApp no se abre, toca los tres puntos (⋮)  
+          y elige <b>“Abrir en navegador”</b>.
+        </p>
+      </div>
     </div>
 
     <!-- FOOTER -->
     <footer class="text-center text-[10px] text-white/30 mt-6 tracking-widest">
-        © 2024 MÉTODO CL ACADEMY
+      © 2026 MÉTODO CL ACADEMY
     </footer>
 
-</main>
+  </main>
 
 </body>
 </html>
